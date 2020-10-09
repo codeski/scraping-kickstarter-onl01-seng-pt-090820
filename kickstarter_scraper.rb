@@ -10,7 +10,8 @@ def create_project_hash
   binding.pry
   projects = {} 
   
-  kickstarter.css
+  kickstarter.css("li.project.grid_4"). each do |project|
+    
 end
 
 create_project_hash
