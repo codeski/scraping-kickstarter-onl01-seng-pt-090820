@@ -8,6 +8,9 @@ def create_project_hash
   html = File.read('fixtures/kickstarter.html')
   kickstarter = Nokogiri::HTML(html)
   binding.pry
+  projects = {} 
+  
+  kickstarter.css
 end
 
 create_project_hash
@@ -17,6 +20,6 @@ create_project_hash
 # image link: project.css("div.project-thumbnail a img").attribute("src").value
 # description: project.css("p.bbcard_blurb").text
 # location name: project.css("span.location-name").text
-# project.css("ul.project-stats li.first.funded strong").text
+# project.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
 
 <span class="location-name">New York, NY</span>
